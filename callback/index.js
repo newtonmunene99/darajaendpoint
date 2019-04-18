@@ -9,8 +9,20 @@ app.use(express.json());
 
 app.get("*", (req, res) => {
   // res.set("Content-Type", "text/html");
-  console.log(req);
-  res.send(req);
+
+  res.send(req.body);
+  console.log(req.body);
+  console.log(req.params);
+  console.log(req.query);
+});
+
+app.post("*", (req, res) => {
+  // res.set("Content-Type", "text/html");
+
+  res.send(req.body);
+  console.log(req.body);
+  console.log(req.params);
+  console.log(req.query);
 });
 
 module.exports = app;
