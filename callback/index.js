@@ -12,7 +12,10 @@ app.post("*", (req, res) => {
   // res.set("Content-Type", "text/html");
 
   res.send(req.body);
+  console.log(req.query);
+  console.log(req.params);
   console.log(req.body);
+  console.log(req.body.Body.stkCallback.CallbackMetadata);
 });
 
 module.exports = app;
